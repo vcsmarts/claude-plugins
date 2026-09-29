@@ -10,18 +10,14 @@ Claude Code skills I carry across repos.
 
 ## Install
 
-In Claude Code:
+Clone once, then symlink each skill into the user skills folder. Claude Code loads everything
+there in every session; `git pull` in the clone is the update.
 
 ```
-/plugin marketplace add vcsmarts/claude-plugins
-/plugin install review-loop@saturn
+git clone git@github.com:vcsmarts/claude-plugins.git ~/repos/claude-plugins
+ln -s ~/repos/claude-plugins/plugins/review-loop/skills/review-loop ~/.claude/skills/review-loop
 ```
 
-Or from a shell:
-
-```
-claude plugin marketplace add vcsmarts/claude-plugins
-claude plugin install review-loop@saturn --scope user
-```
-
-Update later with `claude plugin update review-loop@saturn`.
+The `.claude-plugin` manifests are not needed for this; they keep the marketplace route open.
+That route is `/plugin marketplace add vcsmarts/claude-plugins` followed by
+`/plugin install review-loop@saturn`, and it replaces the symlink, never both.
