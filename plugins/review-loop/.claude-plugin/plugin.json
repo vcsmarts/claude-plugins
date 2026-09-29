@@ -1,0 +1,16 @@
+{
+  "name": "review-loop",
+  "version": "1.0.0",
+  "description": "Worker/reviewer ping-pong on the current branch. The invoking session is the worker; fresh independent reviewer agents are spawned one after another until two in a row find no bugs on their first pass. Reviewers are read-only on the working tree and never run the app or tests.",
+  "author": {
+    "name": "Saturn",
+    "url": "https://github.com/vcsmarts"
+  },
+  "homepage": "https://github.com/vcsmarts/claude-plugins",
+  "repository": "https://github.com/vcsmarts/claude-plugins",
+  "keywords": [
+    "code-review",
+    "subagents",
+    "workflow"
+  ]
+}
